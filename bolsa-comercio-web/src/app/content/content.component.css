@@ -1,0 +1,18 @@
+
+#right-side{
+    height:100%;
+}
+
+#right-side-top,#right-side-button{
+    min-height:50%;
+    height:50%;
+}
+
+.right-side-top-content{
+    width: 100%;
+}
+.col-8,.col-4{
+    padding-left: 1px;
+    height:100%;
+}
+

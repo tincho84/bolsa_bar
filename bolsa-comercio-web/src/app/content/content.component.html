@@ -1,0 +1,49 @@
+
+<!-- Contiene el cuerpo de la app. Del lado izq el panel de las cervezas (70%). 
+  Del lado derecho se divide en dos paneles, ver que va (30%)-->
+
+<div id="content-panel" class="container-fluid" style="height:80vh">
+  <div class="row" style="height:100%">
+    <div id="left-side" class="col-8">
+      
+      <div style="height:100%"> <!-- class="table-responsive"-->
+      <table id="contenido-bebidas" class="table table-dark" style="height:100%">
+        <thead>
+          <tr>
+            <th class="col">Cerveza</th>
+            <th class="col">Precio actual</th>
+            <th class="col">Precio ref</th>
+          </tr>
+        </thead>
+
+        <tbody>
+           <tr *ngFor="let drink of drinksToShow">
+            <th class="table-col1">{{drink.name}}</th>
+            <th class="table-col2">{{drink.newPrice}}</th>
+            <th class="table-col3">{{drink.variation | percent:'1.0-0'}}</th>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+
+    <div id="right-side" class="col-4">
+      
+      <div id="right-side-top" class="row">
+        
+        <app-right-top [drinks_to_detail]="drinks" ></app-right-top>
+         <!--<img class="img-fluid" src="assets/images/cata.jpg" alt="NO SE PUEDE MOSTRAR LA IMAGEN"> -->
+      </div>
+
+      <div id="right-side-button" class="row">
+        <!--<div class="right-side-top-content">-->
+          <img class="img-fluid" src="assets/images/cata.jpg" alt="NO SE PUEDE MOSTRAR LA IMAGEN">
+        <!--</div>-->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
