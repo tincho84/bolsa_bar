@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Drink } from '../drink';
+import { DrinkToShow } from '../drinkToShow';
 
 @Component({
   selector: 'app-right-top',
@@ -8,8 +8,8 @@ import { Drink } from '../drink';
 })
 export class RightTopComponent implements OnInit {
 
-  @Input() drinks_to_detail: Drink[];
-  drink_to_detail:Drink;
+  @Input() drinks_to_detail: DrinkToShow[];
+  drink_to_detail:DrinkToShow;
 
   interval: any;
   index:number;

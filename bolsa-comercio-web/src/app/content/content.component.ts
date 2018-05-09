@@ -10,7 +10,7 @@ import { DrinkToShow } from '../drinkToShow';
 })
 export class ContentComponent implements OnInit, OnDestroy {
 
-  drinks:Drink[];
+//  drinks:Drink[];
   drinksToShow:DrinkToShow[]=[];
   interval: any;
 
@@ -32,11 +32,16 @@ export class ContentComponent implements OnInit, OnDestroy {
 
     this._drinkService.getActualDrinks().subscribe(drink => 
         {
-         this.drinks = drink;
+/*       this.drinks = drink;
          var toShow:DrinkToShow[]=[];
          toShow = this.loadDrinkss(drink);
          this._drinkService.updatePrices(toShow).subscribe();
          this.drinksToShow = toShow;
+ */
+          var toShow:DrinkToShow[]=[];
+          toShow = drink;
+          this._drinkService.updatePrices(toShow).subscribe();
+          this.drinksToShow = toShow;
         });
   }
 
