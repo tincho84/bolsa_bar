@@ -5,26 +5,91 @@
 <div id="content-panel" class="container-fluid" style="height:80vh">
   <div class="row" style="height:100%">
     <div id="left-side" class="col-8">
-      
-      <div style="height:100%"> <!-- class="table-responsive"-->
-      <table id="contenido-bebidas" class="table table-dark" style="height:100%">
-        <thead>
-          <tr>
-            <th class="col">Cerveza</th>
-            <th class="col">Precio actual</th>
-            <th class="col">Precio ref</th>
-          </tr>
-        </thead>
 
-        <tbody>
-           <tr *ngFor="let drink of drinksToShow">
-            <th class="table-col1">{{drink.name}}</th>
-            <th class="table-col2">{{drink.newPrice}}</th>
-            <th class="table-col3">{{drink.variation | percent:'1.0-0'}}</th>
-          </tr>
-        </tbody>
-      </table>
+      <div style="height:5vh">
+        <img src="assets/images/adorno.svg" class="img-lines" alt="Rayas superior content" />
       </div>
+      
+      <!-- si tiene hasta 8 elementos -->
+      <div style="height:70vh" *ngIf="drinksToShow.length < 9 "> <!-- class="table-responsive"-->
+        <table id="contenido-bebidas" class="table" style="height:100%">
+          <thead>
+            <tr>
+              <th class="col"></th>
+              <th class="col">Ibu</th>
+              <th class="col">% Alc</th>
+              <th class="col"></th>
+              <th class="col">Precio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let drink of drinksToShow">
+              <th class="table-col1">{{drink.name}}</th>
+              <th class="table-col2">35</th>
+              <th class="table-col3">13%</th>
+              <th class="table-col4">{{drink.newPrice}}</th>
+              <th class="table-col5">{{drink.variation | percent:'1.0-0'}}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- si tiene mas de 8 elementos -->
+      <div style="height:70vh" *ngIf="drinksToShow.length > 8"> <!-- class="table-responsive"-->
+        <div style="width:50%; float:left" > 
+          <table id="contenido-bebidas" class="table" style="height:100%">
+            <thead>
+              <tr>
+                <th class="col"></th>
+                <th class="col">Hola</th>
+                <th class="col">% Alc</th>
+                <th class="col"></th>
+                <th class="col">Precio</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+               <tr *ngFor="let drink of drinksToShow">
+                <th class="table-col1">{{drink.name}}</th>
+                <th class="table-col2">35</th>
+                <th class="table-col3">13%</th>
+                <th class="table-col4">{{drink.newPrice}}</th>
+                <th class="table-col5">{{drink.variation | percent:'1.0-0'}}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="width:50%; float:left" > 
+          <table id="contenido-bebidas" class="table" style="height:100%">
+            <thead>
+              <tr>
+                <th class="col"></th>
+                <th class="col">Hola</th>
+                <th class="col">% Alc</th>
+                <th class="col"></th>
+                <th class="col">Precio</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+               <tr *ngFor="let drink of drinksToShow">
+                <th class="table-col1">{{drink.name}}</th>
+                <th class="table-col2">35</th>
+                <th class="table-col3">13%</th>
+                <th class="table-col4">{{drink.newPrice}}</th>
+                <th class="table-col5">{{drink.variation | percent:'1.0-0'}}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+      </div>
+  
+      
+      <div style="height:5vh">
+        <img src="assets/images/adorno.svg" class="img-lines-inv" alt="Rayas inferior content" />
+      </div>
+
     </div>
 
 

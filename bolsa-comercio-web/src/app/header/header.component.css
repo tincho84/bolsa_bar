@@ -1,0 +1,16 @@
+
+
+#left-side-header{
+    float:left;
+    height: 100%;
+
+}
+
+#right-side-header{
+    float: left;
+    height: 100%;
+    text-align: right;
+}
+#right-side-header img{
+    height: 100%;
+}

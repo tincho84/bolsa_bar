@@ -25,7 +25,7 @@ export class ContentComponent implements OnInit, OnDestroy {
   updatePanel():void{
     this.interval = setInterval(() => {
       this.getDrinks();
-    }, 3000);
+    }, 30000);
   }
 
   getDrinks(): void {

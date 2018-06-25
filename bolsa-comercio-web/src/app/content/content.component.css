@@ -16,3 +16,31 @@
     height:100%;
 }
 
+.img-lines{
+    height: auto;
+    width: 100%;
+}
+
+.img-lines-inv{
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    height: auto;
+    width: 100%;
+}
+    
+
+#contenido-bebidas{
+    color: #fff;
+}
+
+#contenido-bebidas thead th, #contenido-bebidas th, #contenido-bebidas td {
+    border-top: none;
+    border-bottom: none;
+}
+ 
+.table-col1{
+    text-align: center;
+}
+    
