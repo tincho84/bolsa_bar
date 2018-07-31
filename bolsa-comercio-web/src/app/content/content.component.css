@@ -41,6 +41,34 @@
 }
  
 .table-col1{
+    text-align: left;
+    width: 280px;
+}
+
+.table-col2{
     text-align: center;
+    width: 50px;
+}
+
+.table-col3{
+    text-align: center;
+    width: 50px;
+}
+
+.table-col4{
+    text-align: center;
+    width: 20px;
+}
+
+.table-col5{
+    text-align: center;
+    width: 50px;
+}
+
+.one-table-center{
+    height:100%;
+    width: 450px;
+    margin: 0 auto;
+    text-align: left;
 }
     

@@ -11,15 +11,15 @@
       </div>
       
       <!-- si tiene hasta 8 elementos -->
-      <div style="height:70vh" *ngIf="drinksToShow.length < 9 "> <!-- class="table-responsive"-->
-        <table id="contenido-bebidas" class="table" style="height:100%">
+      <div style="height:70vh;text-align:center;" *ngIf="drinksToShow.length < 9 "> <!-- class="table-responsive"-->
+        <table id="contenido-bebidas" class="table one-table-center" >
           <thead>
             <tr>
-              <th class="col"></th>
-              <th class="col">Ibu</th>
-              <th class="col">% Alc</th>
-              <th class="col"></th>
-              <th class="col">Precio</th>
+              <th class="col table-col1"></th>
+              <th class="col table-col2">Ibu</th>
+              <th class="col table-col3">% Alc</th>
+              <th class="col table-col4"></th>
+              <th class="col table-col5">Precio</th>
             </tr>
           </thead>
 
@@ -28,7 +28,7 @@
               <th class="table-col1">{{drink.name}}</th>
               <th class="table-col2">35</th>
               <th class="table-col3">13%</th>
-              <th class="table-col4">{{drink.newPrice}}</th>
+              <th class="table-col4"><img src="assets/images/Flecha_baja.svg" /></th>
               <th class="table-col5">{{drink.variation | percent:'1.0-0'}}</th>
             </tr>
           </tbody>
